@@ -56,7 +56,7 @@ Now that we have made our 'calculate()' method to operate only on numeric input,
         // Output: NaN
         
 WHAT!?!?!?
-We got an _NaN_ as an output, what went wrong, exactly?
+We got _NaN_ as output, so what went wrong, exactly?
 
 The thing is that, our function decorator 'operateOnNumericInput()' does not preserve the context, hence 'this.rate' is resolving to a global scope. Why? because if you've noticed that 'operateOnNumericInput' is invoked in a 'functional invocation' way, which always resolves to the global scope. 
 
